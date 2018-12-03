@@ -29,7 +29,7 @@ $(document).ready(
                 deepfry();
             else if(!(e.keyCode == 122))
                 e.preventDefault();
-
         });
+        document.addEventListener('touchstart', deepfry, false);
     }
 );
