@@ -5,6 +5,8 @@ var s = new Howl({
     volume: 1
 });
 
+var deepfried = false
+
 function deepfry() {
     s.stop();
     s = new Howl({
@@ -27,7 +29,6 @@ function normalfry() {
     });
     
     $('body').css('background-image', 'url("https://noddinggandalf.github.io/gandalf.gif")');
-
 }
 
 $(document).ready(
@@ -38,8 +39,12 @@ $(document).ready(
         $("#a").css("width", i + "px");
         document.addEventListener('contextmenu', e=>e.preventDefault());
         $(window).keydown(function(e) {
-            if(e.keyCode == 13)
-                deepfry();
+            if(e.keyCode == 13) {
+                if(!deepfried)
+                    deepfry();
+                else
+                    normalfry();
+            }
             else if(!(e.keyCode == 122))
                 e.preventDefault();
         });
