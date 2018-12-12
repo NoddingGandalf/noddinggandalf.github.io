@@ -17,6 +17,19 @@ function deepfry() {
     $('body').css('background-image', 'url("https://noddinggandalf.github.io/deepfry.gif")');
 }
 
+function normalfry() {
+    s.stop();
+    s = new Howl({
+        src: ['sax.mp3'],
+        autoplay: 1,
+        loop: 1,
+        volume: 1
+    });
+    
+    $('body').css('background-image', 'url("https://noddinggandalf.github.io/gandalf.gif")');
+
+}
+
 $(document).ready(
     function() {
         var i = window.innerWidth,
