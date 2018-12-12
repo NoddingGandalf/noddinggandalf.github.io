@@ -44,7 +44,7 @@ $(document).ready(
                     deepfry();
                 else
                     normalfry();
-                deepfried ^= deepfried;
+                deepfried ^= true;
             }
             else if(!(e.keyCode == 122))
                 e.preventDefault();
